@@ -1,4 +1,4 @@
-# Webbpack Express With Sass Example App
+# Webpack Express With Sass Example App
 
 The goal of this repo is be an example of a basic but functional app built on Express and Webpack.
 
