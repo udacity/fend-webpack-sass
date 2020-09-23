@@ -11,8 +11,11 @@ function handleSubmit(event) {
     .then(res => {
         return res.json()
     })
+
+    // change DOM --> Input from API here
     .then(function(data) {
         document.getElementById('results').innerHTML = data.message
+        document.getElementById('results2').innerHTML = formText
     })
 }
 
