@@ -10,6 +10,7 @@ import './styles/header.scss'
 console.log(checkForName);
 
 alert("I EXIST")
+alert("Aye, Captain")
 
 export {
     checkForName,
