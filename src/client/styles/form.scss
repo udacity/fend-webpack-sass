@@ -2,11 +2,15 @@ form {
     border: 1px solid #545454;
     border-radius: 3px;
     padding: 40px;
+    display: flex;
+    flex-direction: column;
 }
 
 input {
+
     padding: 5px 20px;
-    width: 100%;
+    width: 95%;
     line-height: 16px;
     margin: 10px 0;
+    align-self: center;
 }
