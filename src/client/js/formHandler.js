@@ -11,3 +11,4 @@ function handleSubmit(event) {
     alert("Please enter a valid URL.")
     }
 }
+export { handleSubmit }
