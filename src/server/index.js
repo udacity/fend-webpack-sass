@@ -44,7 +44,27 @@ app.listen(8081, function () {
 const baseURL = "https://api.meaningcloud.com/sentiment-2.1?key=";
 const apiCall = (`${baseURL + process.env.API_KEY}&url=wwwgoogle.de&lang=en`);
 
+/* Function to GET Web API Data*/
+const sentiment = async url => await fetch(apiCall);
 
+
+/* Function to POST data */
+const postData = async (url, sentimentAnalysis = {}) => {
+    const response = await fetch(url, {
+      method: 'POST',
+      credentials: 'same-origin',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(sentimentAnalysis)
+    });
+    try {
+      const dataUpdate = await response.json();
+      return dataUpdate;
+    } catch (error) {
+      console.log("error", error);
+    }
+  }
 
 
 
