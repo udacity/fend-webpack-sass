@@ -29,6 +29,7 @@ console.log(JSON.stringify(mockAPIResponse))
 // API stored on Server Side for safety 
 app.get('/getApi', function (req, res) {
     res.send({key: process.env.API_KEY})
+    console.log ("API Key sent");
 })
 
 app.get('/test', function (req, res) {

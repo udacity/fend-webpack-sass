@@ -18,10 +18,7 @@ const sentimentAnalysis = async(inputUrl) => {
     } catch (error) {
         console.log("error", error);
     }
-}
-
-export const updateUI = (myData) => {
-    document.getElementById('polarity').innerHTML = "polarity: " + myData.polarity;
+    document.getElementById('input').innerHTML = "Checked url: " + inputUrl;
     document.getElementById('subjectivity').innerHTML = "Subjectivity: " + myData.subjectivity;
 }
     
