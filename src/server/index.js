@@ -40,14 +40,15 @@ app.listen(8081, function () {
 })
 
 
-// API with dotenv
-var textapi = new aylien({
-    application_id: "your-api-id",
-    application_key: "your-key"
-  });
+// API Call
+const baseURL = "https://api.meaningcloud.com/sentiment-2.1?key=";
+const apiCall = (`${baseURL + process.env.API_KEY}&url=wwwgoogle.de&lang=en`);
 
-  // without dotenv
-  var textapi = new aylien({
-    application_id: process.env.API_ID,
-    application_key: process.env.API_KEY
- });
+
+
+
+
+/* Get URL from client site and replace for formText
+const apiCall = (`${baseURL + process.env.API_KEY}&url=${formText}&lang=en`);
+*/
+console.log(apiCall);
