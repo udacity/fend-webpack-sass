@@ -23,24 +23,22 @@
 
         <main>
             <section>
-                <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
+                <h1 id="headline">Sentiment Ananlysis for Websites</h1>
+                <form onsubmit="return Client.handleSubmit(event)">
+                    <input id="name" type="text" name="input" value=""  placeholder="Enter url of website you would like to analyse">
+                    <input type="submit" name="" value="submit">
                 </form>
             <section>
 
-            <section>
-                <strong>Form Results:</strong>
-                <div id="results"></div>
-            </section>
-            <section>
-                <strong>Form Input was:</strong>
-                <div id="results2"></div>
-            </section>
+                <section>
+                    <strong>Evaluation Results:</strong>
+                    <div class="results" id="input"></div>
+                    <div class="results" id="subjectivity"></div>
+                </section>
         </main>
 
         <footer>
-            <p>This is a footer</p>
+            <p>Natural Language Processing - Project website for Udacity Front End Web Development Nano Degree</p>
         </footer>
 
         <script>
