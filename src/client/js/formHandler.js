@@ -1,37 +1,44 @@
 function handleSubmit(event) {
     event.preventDefault()
-
+        // check what text was put into the form field
     let formText = document.getElementById('name').value
 
- 
-
-    // check what text was put into the form field
-
-    Client.checkForName(formText)
-
     console.log("::: Form Submitted :::")
-    fetch()
-        .then(res => {
-            return res.json()
-        })
-
-        // change DOM --> Input from API here
-        .then(function (data) {
-
-
-            document.getElementById('results').innerHTML = data.message
-            document.getElementById('results2').innerHTML = formText
-        })
+    if(Client.validUrl(formText)) {
+        Client.apiRequest(formText)
+        console.log("::: Form Sent :::")
+    } else {
+    alert("Please enter a valid URL.")
+    }
 }
 
 
+// Client endpoint for Api Key
+async function getKey(server) {
+    const request = await fetch(server, {
+        method: 'GET',
+        credentials: 'same-origin',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    });
+    try {
+        const data = await request.json();
+        console.log("API Key received");
+        return data;
+    } catch (error) {
+        console.log("error", error);
+    }
+}
+getKey('/getApi')
 
 
 
-/* Function to POST data */
+/*
+// Function to GET Api
 const postData = async (url, weatherInfo = {}) => {
   const response = await fetch(url, {
-    method: 'POST',
+    method: 'GET',
     credentials: 'same-origin',
     headers: {
       'Content-Type': 'application/json',
@@ -45,7 +52,7 @@ const postData = async (url, weatherInfo = {}) => {
     console.log("error", error);
   }
 }
-/* Function to GET Project Data */
+// Function to GET Project Data
 
 const getData = async (url) => {
   const response = await fetch('getData');
