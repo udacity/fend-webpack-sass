@@ -18,7 +18,7 @@ We will cover:
 Fork this repo, then clone the branch of your choice from your forked repo down to your computer:
 
 ```
-git clone -- git@github.com:[your-user-name]/webpack-express.git --
+git clone https://github.com/<Github_Username>/fend-webpack-sass.git
 ```
 
 `cd` into your new folder and run:
