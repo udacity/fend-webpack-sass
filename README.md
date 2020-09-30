@@ -8,7 +8,7 @@ If you want to follow along, start from branch 0-initial-setup. Each branch in t
 
 We will cover:
 
-- Transpiling Sass to CSS using Webpack
+- Transpiling SASS to CSS using Webpack
 - Fixing Javascript event errors
 - Building a better production config for Webpack
 - Adding Service Workers to our app using Webpack
