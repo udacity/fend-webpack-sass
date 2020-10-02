@@ -26,6 +26,7 @@ app.use(express.static('dist'))
 
 console.log(JSON.stringify(mockAPIResponse))
 
+
 // API stored on Server Side for safety 
 app.get('/getApi', function (req, res) {
     res.send({key: process.env.API_KEY})
@@ -39,6 +40,23 @@ app.get('/test', function (req, res) {
 // designates what port the app will listen to for incoming requests
 app.listen(8081, function () {
     console.log('Ready & listening on port 8081!')
+})
+
+
+
+// Test server settings from weather project
+// Set up requests
+const projectData = {};
+
+app.post('/postData', (request, response) => {
+  const data = request.body;
+  if (data) {
+    projectData.subjectivity = res.subjectivity;
+  }
+  response.send({message: 'POST received'});
+});
+app.get('/getData', (request, response) => {
+  response.send(JSON.stringify(projectData));
 })
 
 

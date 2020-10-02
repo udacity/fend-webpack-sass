@@ -6,9 +6,10 @@ function handleSubmit(event) {
     if(Client.validUrl(formText)) {
         Client.sentimentAnalysis(formText)
         console.log("::: Form Sent :::")
+        document.getElementById('input').innerHTML = `We analyzed ${formText} for you`;
     } else {
     alert("Please enter a valid URL.")
+    document.getElementById('input').innerHTML = `We tried to analyze ${formText} for you but it wasn't a valid url, please check url and try again`;
     }
-    document.getElementById('input').innerHTML = `We analyzed ${formText} for you`;
 }
 export { handleSubmit }
