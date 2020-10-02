@@ -4,7 +4,7 @@ function handleSubmit(event) {
     let formText = document.getElementById('name').value
     console.log("::: Form Submitted :::" + formText)
     if(Client.validUrl(formText)) {
-        Client.sentimentAnalysis(formText)
+        Client.sentimentAnalysis()
         console.log("::: Form Sent :::")
         document.getElementById('input').innerHTML = `We analyzed ${formText} for you`;
     } else {
