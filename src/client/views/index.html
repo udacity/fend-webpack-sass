@@ -19,16 +19,19 @@
 
     <main>
         <section>
-            <form class="" onsubmit="return handleSubmit(event)">
-                <input id="name" type="number" name="input" value="" onblur="onBlur()" placeholder="Name">
-                <input type="submit" name="" value="submit" onclick="return handleSubmit(event)"
+            <form class="" onsubmit="return Client.handleSubmit(event)">
+                <input id="lat" type="number" name="input" value="" placeholder="Latitude">
+                <input id="lon" type="number" name="input" value="" placeholder="Longitude">
+                <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)"
                     onsubmit="return handleSubmit(event)">
             </form>
             <section>
 
                 <section>
                     <strong>Form Results:</strong>
-                    <div id="results"></div>
+                    <div id="resultsTemp"></div>
+                    <div id="resultsName"></div>
+                    <div id="resultsCountry"></div>
                 </section>
     </main>
 
