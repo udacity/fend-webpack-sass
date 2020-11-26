@@ -10,7 +10,7 @@ function handleSubmit(event) {
   // Client.checkForName(zipCode);
 
   // Base URL for OpenWeatherMap API to optain current weather data by ZIP code
-  let baseURL = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric`;
+  let baseURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric`;
 
   console.log('::: Form Submitted :::');
   fetch(baseURL + apiKey)
