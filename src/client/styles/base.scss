@@ -2,13 +2,27 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-image: radial-gradient(#0084ff, rgb(5, 71, 97));
 }
 
 main {
     flex: 2;
+    h1{
+        text-align: center;
+        color: #190636;
+    }
 }
 
 section {
     max-width: 800px;
     margin: 50px auto;
+}
+
+.results {
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 1rem;
 }

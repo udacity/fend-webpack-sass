@@ -18,17 +18,18 @@
     </header>
 
     <main>
+        <h1>Weather App by Latitude AND Longitude</h1>
         <section>
             <form class="" onsubmit="return Client.handleSubmit(event)">
                 <input id="lat" type="number" name="input" value="" placeholder="Latitude">
                 <input id="lon" type="number" name="input" value="" placeholder="Longitude">
-                <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)"
+                <input type="submit" name="" value="Submit" onclick="return Client.handleSubmit(event)"
                     onsubmit="return handleSubmit(event)">
             </form>
             <section>
+                <h2>Form Results:</h2>
+                <section class="results">
 
-                <section>
-                    <strong>Form Results:</strong>
                     <div id="resultsTemp"></div>
                     <div id="resultsName"></div>
                     <div id="resultsCountry"></div>
