@@ -6,7 +6,7 @@ const app = express()
 
 app.use(express.static('dist'))
 
-console.log('server dir name',__dirname)
+console.log(__dirname)
 
 app.get('/', function (req, res) {
     res.sendFile('dist/index.html')
