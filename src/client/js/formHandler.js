@@ -1,5 +1,5 @@
 // Personal API Key for OpenWeatherMap API
-const apiKey = '&appid=7e3d290cd442823876bb07faec6a3a8e';
+const apiKey = process.env.API_KEY;
 
 function handleSubmit(event) {
   event.preventDefault();
@@ -10,7 +10,7 @@ function handleSubmit(event) {
   // Client.checkForName(zipCode);
 
   // Base URL for OpenWeatherMap API to optain current weather data by ZIP code
-  let baseURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric`;
+  let baseURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=`;
 
   console.log('::: Form Submitted :::');
   fetch(baseURL + apiKey)
