@@ -1,3 +1,6 @@
+const openWeatherURL = "https://api.openweathermap.org/data/2.5/weather?zip=";
+const apiKey = "&appid=<apikey>&units=imperial";
+
 function handleSubmit(event) {
     event.preventDefault()
 
@@ -7,12 +10,13 @@ function handleSubmit(event) {
     Client.checkForName(formText)
 
     console.log("::: Form Submitted :::")
-    fetch('http://localhost:8081/test')
+    fetch(openWeatherURL + formText + apiKey)
+    mode: 'no-cors'
     .then(res => {
         return res.json()
     })
     .then(function(data) {
-        document.getElementById('results').innerHTML = data.message
+        document.getElementById('results').innerHTML = data.main.temp
     })
 }
 
