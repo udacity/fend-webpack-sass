@@ -8,6 +8,11 @@
         <link rel="stylesheet" href="/styles/header.css">
         <link rel="stylesheet" href="/styles/form.css">
         <link rel="stylesheet" href="/styles/footer.css">
+        <script>
+            function onBlur(){
+                return
+            }
+        </script>
     </head>
 
     <body>
@@ -23,9 +28,9 @@
 
         <main>
             <section>
-                <form class="" onsubmit="return handleSubmit(event)">
+                <form class="" onsubmit="return Client.handleSubmit(event)">
                     <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return handleSubmit(event)" onsubmit="return handleSubmit(event)">
+                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
                 </form>
             <section>
 
