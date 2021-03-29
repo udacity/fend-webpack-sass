@@ -18,15 +18,15 @@
     "webpack-cli": "^3.3.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.2",
-    "@babel/preset-env": "^7.10.2",
-    "babel-loader": "^8.1.0",
+    "@babel/core": "^7.13.14",
+    "@babel/preset-env": "^7.13.12",
+    "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.6.0",
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.14.1",
     "sass-loader": "^7.3.1",
     "style-loader": "^0.23.1",
-    "webpack-dev-server": "^3.7.2"
+    "webpack-dev-server": "^3.11.2"
   }
 }
