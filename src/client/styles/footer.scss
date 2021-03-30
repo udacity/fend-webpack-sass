@@ -1,0 +1,15 @@
+// Global Variables
+$primary-color: #43566f;
+$font-color: #ffffff;
+
+@mixin tranform($property) {
+	-webkit-transform: $property;
+	-moz-transform: $property;
+	-o-transform: $property;
+}
+
+p {
+	background-color: $primary-color;
+	text-align: center;
+	color: $font-color;
+}
