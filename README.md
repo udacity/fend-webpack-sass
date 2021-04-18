@@ -1,29 +1,34 @@
-# Webbpack Express Example App
+# Evaluate News (NLP)
 
-The goal of this repo is be an example of a basic but functional app built on Express and Webpack.
+The goal of this repo is to be an example of a functional API built on Express and Webpack.
 
-If you want to follow along, start from branch 0-initial-setup. Each branch in this project is a step along the path to creating a fully functional webpack setup. In each branch, there will be a documentation file that lists out the steps taken in that branch (each step is also roughly a git commit if you look at the history) which you can use as a checklist when setting up your own projects. 
+It depends on using a 3rd-part API from **meaning-cloud** to analyze input text and return some values after doing a sentiment analysis
 
+I chose to show the irony and agreement of the text as a part of the result
 ## What we will cover
+
+---
 
 We will cover:
 
-- Webpack entry point
-- Webpack output and dist folder
-- Webpack Loaders
-- Webpack Plugins
-- Webpack Mode
-- Tools for convenient Webpack development
+- How to setup a basic app with webpack
+- Setting up an API that fetches results
+- Building a better production config for Webpack
+- Adding Service Workers to our app using Webpack
 
 ## Get Up and Running
 
-Fork this repo, then clone the branch of your choice from your forked repo down to your computer:
+---
 
-```
-git clone -- git@github.com:[your-user-name]/webpack-express.git --
-```
+- To run in development mode
 
-`cd` into your new folder and run:
-- ```npm install```
-- ```npm start``` to start the app
-- this app runs on localhost:8080, but you can of course edit that in server.js
+        `npm run build-dev`
+
+- and for production mode you can
+
+        `npm run build-prod`
+
+        then 
+
+        `npm run start`
+

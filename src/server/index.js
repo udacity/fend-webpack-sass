@@ -16,7 +16,7 @@ app.use(cors())
 app.use(bodyParser.json())
 // to use url encoded values
 app.use(bodyParser.urlencoded({
-  extended: true
+    extended: true
 }))
 
 app.use(express.static('dist'))
