@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/server/index.js",
+    "start": "nodemon src/server/index.js",
     "build-prod": "webpack --config webpack.prod.js",
     "build-dev": "webpack-dev-server  --config webpack.dev.js --open"
   },
@@ -14,7 +14,10 @@
   "description": "",
   "dependencies": {
     "css-tree": "*",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "nodemon": "^2.0.7",
+    "request": "^2.88.2",
     "webpack": "^4.35.3",
     "webpack-cli": "^3.3.5"
   },

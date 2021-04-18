@@ -1,37 +1,41 @@
-var path = require('path')
 const express = require('express')
-const mockAPIResponse = require('./mockAPI.js')
-var bodyParser = require('body-parser')
-var cors = require('cors')
+const cors = require('cors')
+const request = require('request');
 
-var json = {
-    'title': 'test json response',
-    'message': 'this is a message',
-    'time': 'now'
-}
+const dotenv = require('dotenv')
+dotenv.config();
 
 const app = express()
+
 app.use(cors())
-// to use json
-app.use(bodyParser.json())
-// to use url encoded values
-app.use(bodyParser.urlencoded({
-    extended: true
-}))
-
 app.use(express.static('dist'))
-
-console.log(JSON.stringify(mockAPIResponse))
+app.use(express.json())
 
 app.get('/', function (req, res) {
     res.sendFile('dist/index.html')
 })
 
-app.get('/test', function (req, res) {
-    res.json(mockAPIResponse);
+//Handle post data requests (add data)
+app.post("/analyze", (req, res) => {
+
+    var options = {
+        'method': 'POST',
+        'url': `https://api.meaningcloud.com/sentiment-2.1?key=${process.env.APIkey}&url=${req.body.articleURL}&lang=${req.body.language}`,
+        'headers': {}
+    };
+
+    request(options, function (error, response) {
+        if (error) throw new Error(error);
+        let result = JSON.parse(response.body);
+        let concepts = 'concepts are: '
+        result.sentimented_concept_list.forEach(element => {
+            concepts += element.form + ", "
+        })
+        res.send(concepts)
+    });
 })
 
 // designates what port the app will listen to for incoming requests
-app.listen(8081, function () {
-    console.log('Example app listening on port 8081!')
+app.listen(process.env.PORT || 8081, function () {
+    console.log(`Example app listening on port ${process.env.PORT || 8081}`)
 })

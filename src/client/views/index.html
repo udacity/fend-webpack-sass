@@ -21,21 +21,20 @@
     <main>
         <section>
             <form class="" onsubmit="return Client.handleSubmit(event)">
-                <input id="name" type="text" name="input" placeholder="Write Your article here">
+                <input id="name" type="text" name="input" placeholder="Insert URL here">
                 <label for="languages">Choose language:</label>
                 <select name="languages" id="languages">
                     <option value="en" selected="selected">English</option>
                     <option value="fr">French</option>
                 </select>
-                <input class="button" type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)"
-                    onsubmit="return Client.handleSubmit(event)">
+                <input class="button" type="submit" name="submit" value="submit"
+                    onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
             </form>
-            <section>
-
-                <section>
-                    <strong>Form Results:</strong>
-                    <div id="results"></div>
-                </section>
+        </section>
+        <section>
+            <strong>Form Results:</strong>
+            <div id="results"></div>
+        </section>
     </main>
 
     <footer>
