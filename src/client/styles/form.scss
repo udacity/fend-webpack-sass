@@ -1,26 +1,12 @@
-@mixin box-sizing($value) {
-    -webkit-border-sizing: $value;
-    -moz-box-sizing: $value;
-    -ms-box-sizing: $value;
-    box-sizing: $value;
-
-}
-
 form {
-    width: 750px;
     border: 1px solid #545454;
     border-radius: 3px;
     padding: 40px;
-
-    input {
-        @include box-sizing(border-box);
-
-        padding: 5px 20px;
-        width: 100%;
-        line-height: 16px;
-        margin: 10px 0;
-    }    
-
-
 }
 
+input {
+    padding: 5px 20px;
+    width: 100%;
+    line-height: 16px;
+    margin: 10px 0;
+}

@@ -5,11 +5,16 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
     entry: './src/client/index.js',
+    // TODO - Add output here
+    output: {
+        libraryTarget: "var",
+        library: "Client"
+    },
     mode: 'development',
     devtool: 'source-map',
-    output: {
-        libraryTarget: 'var',
-        library: 'Client'
+    devServer: {
+        // Update port to 3000 for classroom
+        port: 3000
     },
     module: {
         rules: [
