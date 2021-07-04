@@ -24,14 +24,22 @@
         <main>
             <section>
                 <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                    <input id="zip" type="text" name="input" value="" placeholder="Zip code">
+                    <label for="feelings">How are you feeling today?</label>
+                    <textarea class= "myInput" id="feelings" placeholder="Enter your feelings here" rows="9" cols="50"></textarea><br>
+                    <span class="warning"></span>
+                    <input type="submit" id="generate" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
                 </form>
             <section>
 
             <section>
-                <strong>Form Results:</strong>
+                <strong>Results:</strong>
                 <div id="results"></div>
+                <div id = "entryHolder">
+                    <div id = "date"></div> 
+                   <div id = "temp"></div>
+                   <div id = "content"></div>
+                  </div>
             </section>
         </main>
 
