@@ -1,5 +1,12 @@
 header {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 40px;
+    grid-area:hd;
+    display: inline-grid;
+    margin: 15px;
+    padding: 5px;
+    font-size: 25px;
+    align-items: center; 
+    text-align: center;
+    color: #D6CE15; 
+    font-family: 'Orbitron', sans-serif;  
 }
+

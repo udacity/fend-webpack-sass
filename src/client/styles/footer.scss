@@ -1,5 +1,12 @@
 footer {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
     background: #252525;
     color: #e7e7e7;
-    height: 70px;
+    height: 60px;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
 }
