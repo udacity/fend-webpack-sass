@@ -1,7 +1,21 @@
+$foo: Helvetica;
+$pri: #888;
+
+%mess {
+    color:yellow;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    @extend %mess;
+    header {
+     font-size:40px;
+     font-family:$foo;
+     color:$pri;
+    }
 }
 
 main {
@@ -11,4 +25,13 @@ main {
 section {
     max-width: 800px;
     margin: 50px auto;
+}
+
+@mixin theme($theme:DarkGray){
+    background: $theme;
+    box-shadow:  0 0 1px rgba($theme, .25);
+}
+
+section{
+   @include theme;
 }
