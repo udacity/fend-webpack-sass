@@ -2,13 +2,14 @@ var path = require('path')
 const express = require('express')
 //const webpack= require('webpack')
 const mockAPIResponse = require('./mockAPI.js')
-//const bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
+const fetch = require('node-fetch');
 
 const app = express()
-//app.use(bodyParser.urlencoded({extend:true}));
-//app.use(bodyParser.json());
-//const cors = require('cors');
-//app.use(cors());
+app.use(bodyParser.urlencoded({extend:true}));
+app.use(bodyParser.json());
+const cors = require('cors');
+app.use(cors());
 
 app.use(express.static('dist'))
 
@@ -27,14 +28,19 @@ app.get('/test', function (req, res) {
     res.send(mockAPIResponse)
 })
 
-/*projectData={};
+let projectData={};
 
-app.post('/rdata',function(req,res){
+app.post('/rdata',function(request,response){
    const newEntry={
-        temperature:req.body.temperature
+        temperature:request.body.temperature,
 }
-    res.send(projectData);
+    response.send(projectData);
     projectData = newEntry;
     console.log(projectData);
    
-}) */
+});
+
+
+app.get('/kdata',function(req,res){
+    res.send(projectData);
+})
