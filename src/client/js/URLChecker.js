@@ -1,4 +1,4 @@
-function checkForName(inputText) {
+function checkURL(inputText) {
     console.log("::: Running checkURL :::");
 
     const matchPattern = /^(?:\w+:)?\/\/([^\s\.]+\.\S{2}|localhost[\:?\d]*)\S*$/;
@@ -6,6 +6,6 @@ function checkForName(inputText) {
     if(!matchPattern.test(inputText)) {
         alert("URL is Invalid")
     }
-   
+   return matchPattern.test(inputText)
 }
-export { checkForName }
+export { checkURL }
