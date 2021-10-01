@@ -1,16 +1,11 @@
 function checkForName(inputText) {
-    console.log("::: Running checkForName :::", inputText);
-    let names = [
-        "Picard",
-        "Janeway",
-        "Kirk",
-        "Archer",
-        "Georgiou"
-    ]
+    console.log("::: Running checkURL :::");
 
-    if(names.includes(inputText)) {
-        alert("Welcome, Captain!")
+    const matchPattern = /^(?:\w+:)?\/\/([^\s\.]+\.\S{2}|localhost[\:?\d]*)\S*$/;
+
+    if(!matchPattern.test(inputText)) {
+        alert("URL is Invalid")
     }
+   
 }
-
 export { checkForName }

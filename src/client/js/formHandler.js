@@ -9,28 +9,32 @@ function handleSubmit(event) {
 
     console.log("::: Form Submitted :::")
     fetch('http://localhost:8081/getKey')
-    .then(res => {
-        console.log("::: Form sent :::")
-        console.log(res.body);
-        formdata.append("key", res.json());
-        formdata.append("txt", formText);
+    .then(res => res.json())
+    .then(result => {
+        formdata.append("key", result);
+        formdata.append("url", formText);
+        formdata.append("lang", "en");
         const requestOptions = {
             method: 'POST',
             body: formdata,
             redirect: 'follow'
-          };
-          
-          const response = fetch("https://api.meaningcloud.com/sentiment-2.1", requestOptions)
+          }
+          return requestOptions
+                }
+          )
+          .then( requestOptions => {
+            fetch("https://api.meaningcloud.com/sentiment-2.1", requestOptions)
             .then(response => ({
               status: response.status, 
               body: response.json()
             }))
-            .then(function({ status, body }) {
-                document.getElementById('results').innerHTML = body
+            .then(({ status, body }) => body)
+            .then (body => {
+              document.getElementById('results').innerHTML = body.agreement ? `${body.agreement}, ${body.confidence}, ${body.irony}, ${body.model}, ${body.score_tag}` : ""
             })
-            .catch(error => console.log('error', error));
-    })
-    
+            .catch(error => console.log('error', error)); 
+          }
+          )
 }
 
 export { handleSubmit }
