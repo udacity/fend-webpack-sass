@@ -1,4 +1,4 @@
-import { checkURL } from "../src/client/js/URLChecker";
+import { checkURL } from "../src/client/js/urlChecker";
 
 
 describe("Testing the submit functionality", () => {
