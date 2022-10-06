@@ -1,14 +1,28 @@
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 main {
-    flex: 2;
+  flex: 2;
+  .results {
+    display: flex;
+    width: 20rem;
+    height: auto;
+    align-items: center;
+  }
+  img {
+    width: 40rem;
+    padding: inherit;
+  }
+  .pictureDate {
+    font-family: "Courier New", Courier, monospace;
+    text-align: center;
+  }
 }
 
 section {
-    max-width: 800px;
-    margin: 50px auto;
+  max-width: 800px;
+  margin: 50px auto;
 }
