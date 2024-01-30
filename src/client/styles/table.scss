@@ -1,0 +1,23 @@
+$table-width: 50%;
+$table-margin: 20px auto;
+
+table {
+  width: $table-width;
+  margin: $table-margin;
+  border-collapse: collapse;
+
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
+  #result img {
+    max-width: 100px; 
+    height: auto;
+  }
+}
